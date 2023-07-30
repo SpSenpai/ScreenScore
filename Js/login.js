@@ -15,9 +15,9 @@ document.querySelector(".forget-pass").addEventListener('click', ()=>{
 })
 
 document.querySelector(".login").addEventListener('click', ()=>{
-    location.href = "Html/homepage.html"
+    location.href = "homepage.html"
 })
 
 document.querySelector("#register").addEventListener('click', ()=>{
-    location.href = "Html/homepage.html"
+    location.href = "homepage.html"
 })
