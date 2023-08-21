@@ -1,194 +1,69 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100;9..40,200;9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800;9..40,900&family=Poppins:wght@900&display=swap');
-:root{
-    --text-color: #fff;
-    --color1: #020210;
-    --color2: #150050;
-    --color3: #FB2576;
 
-}
 
-*{
-    margin: 0;
-    padding: 0;
-    font-family: 'DM Sans', sans-serif;
-    user-select: none;
-    text-decoration: none;
-    transition: 0.2s ease-in-out;
-    outline: none;
-}
-
-body{
-    display: flex;
-    flex-direction: column;
-    overflow-x: hidden;
-    background-color: var(--color1);
-    color: var(--text-color);
-}
-::-webkit-scrollbar {
-    display: none;
-}
-#navbar{
-    width: 100vw;
-    height: 8vh;
-    background-color: #020210c3;
-}
-
-#navbar nav{
-    display: flex;
-    height: 100%;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-}
-
-#navbar nav #logo{
-    cursor: pointer;
-    font-size: 1.8rem;
-    margin: 0;
-}
-
-#navbar nav .logo:hover{
-    color: var(--color3);
-}
-
-#navbar nav ul{
-    display: flex;
-    align-items: center;
-    padding: 0;
-    height: 100%;
-    list-style: none;
+/* Css for banner at top */
+/* Should be no overflow + relative display to aligh child elements absulitely relative to this */
+.carousel-item {
+    overflow: hidden;
+    height: 70vh;
+    width: 100%;
     position: relative;
-    margin-right: -10vh;
-    margin-bottom: 0;
-    font-weight: 700;
 }
 
-#navbar nav ul li{
-    height: max-content;
-    cursor: pointer;
-    width: 7vw;
-    text-align: center;
-}
 
-#navbar nav ul .list-bar{
+/* banner image crop it from midddle if it is bigger */
+.carousel-item img {
     position: absolute;
-    bottom: -5px;
-    left: 1vw;
-    height: 2px;
-    width: 5vw;
-    background-color: var(--color3);
-}
-
-
-#navbar nav ul li:hover{
-    color: var(--color3);
-}
-
-#navbar nav .profile{
-    height: 30px;
-    width: 30px;
-    overflow: hidden;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#navbar nav .profile img{
-    height: 100%;
-}
-
-#navbar nav .search-bar{
-    width: 36vw;
-    display: flex;
-    align-items: center;
-}
-
-.nav-active{
-    color: var(--color3);
-}
-
-.search-bar input{
-    width: 80%;
-    height: 5.5vh;
-    padding-left: 20px;
-    border: none;
-    border-radius: 5px 0 0 5px;
-}
-
-
-.search-bar button{
-    height: 5.5vh;
-    width: 13%;
-    border: none;
-    border-radius: 0 5px 5px 0;
-    background-color: #fff;
-}
-.search-bar button:hover{
-    background-color: #e7e7e7;
-}
-
-.banner{
-    height: 70vh;
-    width: 100vw;
-    overflow: hidden;
-    position: relative;
-}
-
-.carousel-item{
-    height: 70vh;
-    width: 100%;
-    position: relative;
-}
-
-.carousel-item img{
-    height: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-height: 100%;
     width: 100%;
 }
 
-.carousel-item .banner-details{
+/* Banner details */
+.carousel-item .banner-details {
     position: absolute;
     bottom: 6vh;
     left: 4vw;
-    text-shadow: 1px 1px 1px #000;
-    z-index: 5;
+    text-shadow: 3px 3px 10px #000;
 }
-.banner-details .banner-title{
+
+.banner-details .banner-title {
     font-weight: 700;
     font-size: 2.8rem;
 }
-.banner-details .banner-genres{
+
+.banner-details .banner-genres {
     margin-top: -5px;
     font-size: 1.2rem;
-    
 }
 
-.banner-details .banner-rating {
-    display: flex;
-    align-items: center;
-}
-
-
-.banner-details .banner-rating .banner-stars{
+.banner-details .banner-rating .banner-stars {
     font-size: 2rem;
-    margin-right: 15px;
 }
 
-.banner-details .banner-view-more{
+.banner-details .banner-view-more {
     width: 200px;
     height: 40px;
     margin: 10px 0;
-    border: none;
     border-radius: 5px;
-    background-color: var(--color3);
-    color: #fff;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-theme-color);
+    color: var(--text-color);
+    box-shadow: 3px 3px 10px #000;
 }
 
-.banner-details .banner-view-more:hover{
-    background-color: #ff0062;
+.banner-details .banner-view-more:hover {
+    background-color: var(--main-theme-hover);
 }
 
-.list-type{
+
+/* Main Movie lists */
+/* Type title */
+.list-type {
     margin: 4vh 2vw;
     width: max-content;
     padding: 0 2vw;
@@ -197,16 +72,19 @@ body{
     border-bottom: 3px solid #fff;
 }
 
-.movie-grid{
+/* The Grid itself */
+.movie-grid {
     width: 92vw;
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 2vw;
     margin-bottom: 5vh;
+    min-height: 80vh;
 }
 
-.movie-grid .movie{
+/* Movie poster */
+.movie-grid .movie {
     width: 100%;
     height: 70vh;
     overflow: hidden;
@@ -218,112 +96,156 @@ body{
     justify-content: center;
 }
 
-.movie-grid .movie img{
+.movie-grid .movie img {
     width: 100%;
-}
-.movie .black-blur{
-    height: 40%;
-    width: 100%;
-    position: absolute;
-    background:linear-gradient(0deg, #000, 70%, transparent);
-    bottom: 0;
 }
 
-.movie .movie-info{
+.movie .movie-info {
     position: absolute;
-    bottom: 0;
+    bottom: 5px;
     left: 5%;
+    text-shadow: 1px 1px 5px #000;
 }
 
-.movie-info .title{
+.movie-info .title {
     font-size: 1.5rem;
     line-height: 1.5rem;
     font-weight: 600;
 }
-.view-more{
+
+/* View more link that comes on hover only */
+.view-more {
     position: absolute;
     height: 100%;
     width: 100%;
+    text-decoration: none;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: #000000d3;
+    color: #fff;
     opacity: 0;
 }
 
-.movie:hover img{
+/* Movie hover effects */
+/* Image transformation */
+.movie:hover img {
     width: 180%;
     transform: rotate(-10deg);
 }
 
-.movie:hover .view-more{
+/* Display view more */
+.movie:hover .view-more {
     opacity: 1;
 }
 
-.load-more{
+/* Load more button at the bottom of every list */
+.load-more {
     display: block;
     margin: 0 auto 20vh auto;
     width: 20vw;
     border: none;
     height: 30px;
     border-radius: 5px;
-    background-color: #FB2576;
-    color: #fff;
+    background-color: var(--main-theme-color);
+    color: var(--text-color);
 }
-.load-more i{
+
+/* i is arrow symbol inside button */
+.load-more i {
     font-size: 0.7rem;
 }
-.load-more:hover{
+
+.load-more:hover {
     width: 25vw;
-    background-color: #ff0062;
+    background-color: var(--main-theme-hover);
 }
 
 
-.footer{
-    height: 55vh;
-    width: 100vw;
-    background-color: #282c2f;
-    display: flex;
-    padding: 10vh 5vw;
-}
-
-.footer .footer-contact{
-    width: 50%;
-    height: 30vh;
+/* Info on favourite poage and link to go back to homepage if there are no favorites  */
+.no-favs{
+    display: block;
+    width: 90vw;
     font-size: 1.2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
 }
 
-.footer .footer-contact div div{
-    display: inline-flex;
-    height: 2.5rem;
-    width: 2.5rem;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    background-color: var(--color1);
-    margin-right: 20px;
+.no-favs a{
+    display: block;
+    color: var(--main-theme-color);
+}
+.no-favs a:hover{
+    color: var(--main-theme-hover);
 }
 
-.footer .footer-about-us{
-    width: 50%;
+/* Responsiveness */
+@media only screen and (max-width: 720px) {
+    
+/* Css for banner at top */
+.carousel-item {
+    height: 30vh;
 }
 
-.footer .footer-about-us .socials{
-    display: flex;
+
+/* Banner details */
+.carousel-item .banner-details {
+    position: absolute;
+    bottom: 0.5vh;
 }
 
-.footer .footer-about-us .socials a{
-    width: 40px;
-    height: 40px;
-    margin-right: 20px;
-    background-color: var(--color1);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    color: #fff;
-    text-decoration: none;
+.banner-details .banner-title {
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+}
+
+.banner-details .banner-genres {
+    font-size: 1rem;
+}
+
+.banner-details .banner-rating .banner-stars {
+    font-size: 1.2rem;
+}
+
+.banner-details .banner-view-more {
+    width: 140px;
+    height: 30px;
+}
+
+/* Main Movie lists */
+/* Type title */
+.list-type {
+    margin: 4vh 3vw;
+    padding: 0 2vw;
+    font-size: 1.2rem;
+    border-bottom: 2px solid #fff;
+}
+
+/* The Grid itself */
+.movie-grid {
+    width: 96vw;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2vw;
+    margin-bottom: 5vh;
+}
+
+/* Movie poster */
+.movie-grid .movie {
+    height: 30vh;
+    border-radius: 2px;
+}
+
+.movie-info .title {
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+}
+
+/* Load more button at the bottom of every list */
+.load-more {
+    margin: 0 auto 4vh auto;
+    width: 50vw;
+    border-radius: 2px;
+}
+.load-more:hover {
+    width: 75vw;
+    background-color: var(--main-theme-hover);
+}
 }

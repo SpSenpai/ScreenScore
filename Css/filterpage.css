@@ -1,0 +1,134 @@
+.filter-selection {
+    margin: 10vh 5vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.filter-selection .genres {
+    width: 80vw;
+    margin: 2vh auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.genres .genre-box {
+    width: 13%;
+    margin: 5px 10px;
+    padding: 3px;
+    border: 1px solid var(--text-color);
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.genre-box.genre-selected {
+    background-color: var(--main-theme-color);
+    border: 1px solid var(--main-theme-color);
+}
+
+.genre-box:hover {
+    opacity: 1;
+}
+
+.extra-filters {
+    margin-top: 5vh;
+    height: 0px;
+    display: grid;
+    overflow: hidden;
+}
+
+.ex-filter-box .filter-text {
+    width: 100px;
+    display: inline-block;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.ex-filter-box input {
+    padding: 3px 10px;
+    width: 100px;
+    border-radius: 0;
+    border: 0px;
+}
+
+
+.buttons button {
+    width: 150px;
+    height: 30px;
+    border: 1px solid var(--main-theme-color);
+    border-radius: 2px;
+    margin: 5px;
+    background-color: var(--main-theme-color);
+    color: var(--text-color);
+}
+
+.buttons button i {
+    font-size: 0.8rem;
+    margin-left: 5px;
+}
+
+button.more-filters {
+    background-color: var(--bg-color);
+    border: 1px solid var(--text-color);
+}
+
+.buttons button:hover {
+    background-color: var(--main-theme-hover);
+    border: 1px solid var(--main-theme-hover);
+}
+
+/* page change box */
+.page-change {
+    display: flex;
+    width: 15vw;
+    justify-content: space-between;
+    margin: 10vh auto;
+}
+
+.page-change button {
+    width: 5vw;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    color: #000;
+}
+
+.page-change button:enabled:hover {
+    background-color: var(--main-theme-color);
+}
+
+
+@media only screen and (max-width: 720px) {
+    .filter-selection {
+        margin: 5vh 2vw;
+    }
+
+    .filter-selection .genres {
+        width: 98vw;
+    }
+
+    .genres .genre-box {
+        width: 40%;
+    }
+
+
+    /* page change box */
+    .page-change {
+        width: 50vw;
+        margin: 5vh auto 10vh auto;
+    }
+
+    .page-change button {
+        width: 20vw;
+    }
+
+}

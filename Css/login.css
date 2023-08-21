@@ -1,22 +1,41 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100;9..40,200;9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800;9..40,900&family=Poppins:wght@900&display=swap');
-:root{
-    --primary-color: #fff;
-    --sec-color: #000;
-    --border-color: #adadad;
+@import url('https://fonts.googleapis.com/css2?family=ADLaM+Display&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,700;9..40,800;9..40,900&display=swap');
+
+
+/* Color code variables to use in website */
+:root {
+    --text-color: #fff;
+    --bg-color: #020210;
+    --main-theme-color: #ff1a1a;
+    --main-theme-hover: #c90000;
+    --footer-bg: #282833;
 }
 
-*{
-    margin: 0;padding: 0;
+
+/* default CSS for each element */
+* {
+    margin: 0;
+    padding: 0;
     font-family: 'DM Sans', sans-serif;
-    user-select: none;
     text-decoration: none;
     transition: 0.2s ease-in-out;
+    outline: none;
 }
 
-body{
+::selection {
+    background: var(--main-theme-color);
+}
+
+body {
     display: flex;
     overflow-x: hidden;
+    background-color: var(--bg-color);
+    color: var(--text-color);
 }
+
+::-webkit-scrollbar {
+    display: none;
+}
+
 
 
 
@@ -45,7 +64,7 @@ body{
     font-size: 0.8rem;
     height: 20px;
     width: 100px;
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--text-color);
     border-radius: 10px;
     display: flex;
     align-items: center;
@@ -96,12 +115,12 @@ body{
     align-items: center;
     justify-content: center;
     border-radius: 10px;
-    border: 0.6px solid var(--border-color);
-    background-color: var(--primary-color);
+    border: 0.6px solid var(--bg-color);
+    background-color: var(--text-color);
     margin: 8px;
     padding-left: 25px;
     outline: none;
-    color: #404040;
+    color: var(--bg-color);
 
 }
 
@@ -132,7 +151,7 @@ body{
 .or .line{
     width: 20%;
     height: 1px;
-    background-color: var(--border-color);
+    background-color: var(--text-color);
     margin: auto 20px;
 }
 
@@ -144,7 +163,7 @@ body{
 }
 
 a{
-    color: var(--sec-color);
+    color: var(--main-theme-color);
     font-weight: 500;
     text-decoration: none;
 }
@@ -162,8 +181,8 @@ a:hover{
     justify-content: center;
     border-radius: 20px;
     border: none;
-    background-color: var(--sec-color);
-    color: var(--primary-color);
+    background-color: var(--main-theme-color);
+    color: var(--text-color);
     margin-bottom: 20px;
     cursor: pointer;
 }
@@ -173,7 +192,7 @@ a:hover{
 }
 
 .login-sec .login:hover{
-    background-color: #2d2d2d;
+    background-color: var(--main-theme-hover);
 }
 
 .left-container{

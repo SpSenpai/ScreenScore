@@ -1,0 +1,581 @@
+
+/* Movie banner */
+.banner {
+    height: 60vh;
+    width: 100vw;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner img {
+    width: 100%;
+}
+
+
+/* Movie Poster */
+.poster {
+    height: 80vh;
+    width: 25vw;
+    position: absolute;
+    top: 30vh;
+    left: 2vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    box-shadow: 0px 0px 30px 2px #000;
+}
+
+.poster img {
+    width: 100%;
+}
+
+/* Poster btn to add to favourite */
+.poster .add-to-fav {
+    position: absolute;
+    top: 0;
+    left: 0px;
+    background: none;
+    border: none;
+    font-size: 4.5rem;
+    opacity: 0.9;
+    text-shadow: 0px 10px 10px #000;
+    transition: 0s;
+    -webkit-text-stroke: 1px #fff;
+}
+
+/* If movie is alread added in favourites */
+.add-to-fav.fav-added {
+    color: var(--main-theme-color);
+}
+
+/* Aligning 2 icons from font awosome */
+.add-to-fav i {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-shadow: none;
+}
+
+.add-to-fav i i {
+    position: absolute;
+    color: var(--text-color);
+    left: 0.6rem;
+    top: 0.6rem;
+    font-size: 2.5rem;
+    opacity: inherit;
+}
+
+.poster .add-to-fav:hover {
+    opacity: 1;
+}
+
+
+/* Movie detaisls */
+.details {
+    margin: 2vh 2vw 0 30vw;
+    width: 50vw;
+}
+
+.details .title {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.details .genres .genre-btn {
+    padding: 2px 15px;
+    margin: 0 5px 10px 0;
+    font-size: 0.8rem;
+    border: 1px solid var(--text-color);
+    background: none;
+    color: var(--text-color);
+    border-radius: 10px;
+}
+
+.details .genres .genre-btn:hover {
+    background-color: var(--text-color);
+    color: var(--bg-color);
+
+}
+
+.details .info-list {
+    margin: 5px;
+}
+
+.details .rating {
+    margin: 15px 0;
+}
+
+.details .rating {
+    font-size: 1.5rem;
+    font-weight: 700;
+
+}
+
+.details .rating .rating-number span {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.details .watch-trailer {
+    border: none;
+    height: 40px;
+    padding: 0 40px;
+    border-radius: 20px;
+    margin: 20px 0;
+    font-size: 1.3rem;
+    background-color: var(--main-theme-color);
+    color: var(--text-color);
+}
+
+.details .watch-trailer i {
+    margin-left: 5px;
+}
+
+.details .watch-trailer:hover {
+    background-color: var(--main-theme-hover);
+}
+
+/* Trailer overlay that comes on onclick of watch trailer button */
+.trailer-overlay {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: -100vh;
+    z-index: 999;
+    background-color: #000000ee;
+}
+
+.trailer-overlay .cross-trailer {
+    position: absolute;
+    right: 0px;
+    top: -15px;
+    padding: 20px;
+    z-index: inherit;
+    font-size: 3rem;
+    opacity: 0.6;
+    background: none;
+    color: #fff;
+    border: none;
+}
+
+.trailer-overlay .cross-trailer:hover {
+    opacity: 1;
+}
+
+.carousel-item .yt-video {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+
+/* Review/comment section */
+.review-section .sec-divider {
+    margin: 10vh 0 5vh 2vw;
+    width: max-content;
+    padding: 0 2vw;
+    font-size: 1.7rem;
+    font-weight: 600;
+    border-bottom: 3px solid var(--text-color);
+}
+
+
+/* Your review posting section */
+.review-section .your-review {
+    margin: 0 0 50px 4vw;
+}
+
+.your-review .your-review-stars {
+    font-size: 2rem;
+    width: 30vw;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.your-review .your-review-stars .your-review-star {
+    cursor: pointer;
+}
+
+.your-review .your-review-text {
+    width: 90vw;
+    height: 100px;
+    padding: 10px 15px;
+    text-align: start;
+    resize: none;
+    display: block;
+    border-radius: 5px;
+}
+
+.your-review .your-review-submit {
+    margin-top: 20px;
+    padding: 5px 30px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--main-theme-color);
+    color: var(--text-color);
+}
+
+.your-review .your-review-submit i {
+    margin-left: 10px;
+}
+
+.your-review .your-review-submit:hover {
+    background-color: var(--main-theme-hover);
+}
+
+/* Review sorting section */
+.review-section .sort-section {
+    margin: 0 4vw;
+    position: relative;
+}
+
+.review-section .sort-section .sorting-btn {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.sorting-btn i {
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-right: 10px;
+    transition: none;
+}
+
+
+
+.sort-section .sort-float-box {
+    position: absolute;
+    top: 2rem;
+    left: 0px;
+    background-color: #1b1b1b;
+    z-index: 999;
+    border-radius: 5px;
+    overflow: hidden;
+    height: 0;
+}
+
+.sort-float-box .sort-option {
+    width: 180px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.sort-float-box .sort-option:hover {
+    background-color: #464646;
+}
+
+.sort-option.sort-active {
+    background-color: #464646;
+}
+
+
+.review-section .sorting-btn:hover {
+    color: var(--color3);
+}
+
+/* Actual comment section */
+/* Review grid */
+.review-section .review-grid {
+    margin: 4vw;
+}
+
+/* Single review */
+.review-grid .review {
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.review-grid .review .profile {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.review .profile .profile-img {
+    height: 40px;
+    width: 40px;
+    overflow: hidden;
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.profile-img img {
+    height: 100%;
+}
+
+.review .name span {
+    opacity: 0.5;
+    font-size: 0.8rem;
+    margin-left: 10px;
+}
+
+.review .up-down-votes {
+    display: flex;
+    width: 100px;
+    margin-top: 10px;
+    justify-content: space-between;
+}
+
+.review .up-down-votes div {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.review .up-down-votes div:hover {
+    opacity: 1;
+}
+
+.review .up-down-votes div i {
+    margin-right: 5px;
+}
+
+
+/* Report Btn */
+.review .report-btn {
+    position: absolute;
+    right: 10px;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.review .report-btn:hover {
+    background-color: #3d3d3d89;
+}
+
+.review .report-popup {
+    position: absolute;
+    right: 40px;
+    background-color: #1b1b1b;
+    border-radius: 5px;
+    cursor: pointer;
+    height: 40px;
+    width: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.review .report-popup:hover {
+    background-color: #464646;
+}
+
+
+@media only screen and (max-width: 720px) {
+    /* Movie banner */
+    .banner {
+        height: 30vh;
+    }
+
+    
+    /* Movie Poster */
+    .poster {
+        height: 40vh;
+        width: 60vw;
+        top: 15vh;
+        left: 20vw;
+    }
+
+    
+    
+    /* Movie detaisls */
+    .details {
+        margin: 25vh 4vw 0 4vw;
+        width: 92vw;
+    }
+    
+    
+    .carousel-item .yt-video {
+        margin: 0 auto;
+        width: 50vw;
+    }
+    
+    
+    /* Review/comment section */
+
+    
+    /* Your review posting section */
+
+    
+    .your-review .your-review-stars {
+        width: 80vw;
+    }
+    
+    
+    .your-review .your-review-text {
+        height: 200px;
+    }
+    
+
+    
+    /* Review sorting section */
+    .review-section .sort-section {
+        margin: 0 4vw;
+        position: relative;
+    }
+    
+    .review-section .sort-section .sorting-btn {
+        display: inline-flex;
+        align-items: center;
+        cursor: pointer;
+    }
+    
+    .sorting-btn i {
+        font-size: 1.5rem;
+        font-weight: 800;
+        margin-right: 10px;
+        transition: none;
+    }
+    
+    
+    
+    .sort-section .sort-float-box {
+        position: absolute;
+        top: 2rem;
+        left: 0px;
+        background-color: #1b1b1b;
+        z-index: 999;
+        border-radius: 5px;
+        overflow: hidden;
+        height: 0;
+    }
+    
+    .sort-float-box .sort-option {
+        width: 180px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+    
+    .sort-float-box .sort-option:hover {
+        background-color: #464646;
+    }
+    
+    .sort-option.sort-active {
+        background-color: #464646;
+    }
+    
+    
+    .review-section .sorting-btn:hover {
+        color: var(--color3);
+    }
+    
+    /* Actual comment section */
+    /* Review grid */
+    .review-section .review-grid {
+        margin: 4vw;
+    }
+    
+    /* Single review */
+    .review-grid .review {
+        margin-bottom: 40px;
+        position: relative;
+    }
+    
+    .review-grid .review .profile {
+        display: flex;
+        align-items: center;
+        margin-bottom: 5px;
+    }
+    
+    .review .profile .profile-img {
+        height: 40px;
+        width: 40px;
+        overflow: hidden;
+        margin-right: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+    }
+    
+    .profile-img img {
+        height: 100%;
+    }
+    
+    .review .name span {
+        opacity: 0.5;
+        font-size: 0.8rem;
+        margin-left: 10px;
+    }
+    
+    .review .up-down-votes {
+        display: flex;
+        width: 100px;
+        margin-top: 10px;
+        justify-content: space-between;
+    }
+    
+    .review .up-down-votes div {
+        opacity: 0.7;
+        cursor: pointer;
+    }
+    
+    .review .up-down-votes div:hover {
+        opacity: 1;
+    }
+    
+    .review .up-down-votes div i {
+        margin-right: 5px;
+    }
+    
+    
+    /* Report Btn */
+    .review .report-btn {
+        position: absolute;
+        right: 10px;
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+    
+    .review .report-btn:hover {
+        background-color: #3d3d3d89;
+    }
+    
+    .review .report-popup {
+        position: absolute;
+        right: 40px;
+        background-color: #1b1b1b;
+        border-radius: 5px;
+        cursor: pointer;
+        height: 40px;
+        width: 0px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+    
+    .review .report-popup:hover {
+        background-color: #464646;
+    }
+    
+}
