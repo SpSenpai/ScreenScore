@@ -126,7 +126,7 @@ function displayMovies(data, parentDiv) {
                 </span>
             </div>
         </div>
-        <a class="view-more" href="moviepage.html?name=${chooseNameorTitle(name, title)}&type=${chooseMovieorTv(name)}&id=${id}">View more</a>
+        <a class="view-more" href="reviewpage.html?name=${chooseNameorTitle(name, title)}&type=${chooseMovieorTv(name)}&id=${id}">View more</a>
     `
     parentDiv.appendChild(movieDiv)
         
