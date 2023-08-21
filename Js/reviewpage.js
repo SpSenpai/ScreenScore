@@ -442,7 +442,7 @@ function addTofavorite(id){
     if(favorites == null) favorites = []
 
     if(favorites.includes(type +"-"+ id)){
-        favorites.splice(favorites.indexOf(id), 1)
+        favorites.splice(favorites.indexOf(type +"-"+ id), 1)
         document.querySelector('.add-to-fav').innerHTML = "<i class=\"fa-sharp fa-solid fa-bookmark\"><i class=\"fa-sharp fa-solid fa-plus\"></i></i>"
         document.querySelector('.add-to-fav').classList.remove('fav-added')
 
