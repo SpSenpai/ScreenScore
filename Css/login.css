@@ -1,3 +1,7 @@
+.login-body {
+    flex-direction: row;
+}
+
 .right-container {
     width: 50vw;
     height: 100vh;
@@ -191,7 +195,7 @@ a:hover {
 
 
 @media only screen and (max-width: 720px) {
-    body {
+    .login-body {
         flex-direction: column;
     }
 
