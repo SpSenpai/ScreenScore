@@ -102,7 +102,10 @@ getMovie(BASE_URL + "/" + type + "/" + id + "?language=en-US&api_key=" + API_KEY
 function getMovie(url) {
     fetch(url).then(res => res.json()).then(data => {
         console.log(data)
+        if(type == "movie")
         fillDetails(data)
+        else
+        fillDetailsTV(data)
     })
 }
 
@@ -141,6 +144,40 @@ function fillDetails(data) {
     ` + infoSection.innerHTML
 }
 
+function fillDetailsTV(data){
+    const { name, id, vote_average, vote_count, genres, backdrop_path, poster_path, number_of_episodes, number_of_seasons, tagline, first_air_date, overview } = data;
+
+    let infoSection = document.querySelector(".info-section")
+    infoSection.innerHTML =
+        `
+        <div class="banner">
+            <img src="${imageURL(backdrop_path, true)}" alt="">
+        </div>
+        <div class="poster">
+            <img src="${imageURL(poster_path, false)}" alt="" srcset="">
+            ${checkFavorite(id)}
+        </div>
+        <div class="details">
+            <div class="title">${name}</div>
+            <div class="genres">${generateGenreBtns(genres)}
+                
+            </div>
+            <div class="info-list">Realese : ${first_air_date}</div>
+            <div class="info-list">Seasons : ${number_of_seasons}</div>
+            <div class="info-list">Episodes : ${number_of_episodes}</div>
+            <div class="info-list">Tagline : ${tagline}</div>
+            <div class="rating">
+                <div class="stars">
+                    ${starsGenerate(vote_average / 2)}
+                </div>
+                <div class="rating-number">${(vote_average / 2).toFixed(2)}/5 <span>(${Numberformat(vote_count)} Votes)</span></div>
+            </div>
+            <div class="desc"> Description : ${overview}
+            </div>
+            <button onclick="traillerBoxOpen()" class="watch-trailer">Watch trailer <i class="fa-solid fa-play"></i></button>
+        </div>
+    ` + infoSection.innerHTML
+}
 
 
 // Function to generate Image src url by path
@@ -291,7 +328,6 @@ for (let i = 0; i < noOfReviews; i++) {
     reviews.push(review)
 }
 
-console.log(reviews)
 
 displayReviews()
 function displayReviews(){

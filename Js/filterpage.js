@@ -110,8 +110,8 @@ let page = queryObject['page']
 
 
 if(genereQuery == undefined) genereQuery = ""
-if(minRating == undefined) minRating = 2.0
-if(maxRating == undefined) maxRating = 10.0
+if(minRating == undefined) minRating = 1.0
+if(maxRating == undefined) maxRating = 5.0
 if(minYear == undefined) minYear = 1950
 if(maxYear == undefined) maxYear = 2024
 if(minVote == undefined) minVote = 1

@@ -1,45 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=ADLaM+Display&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,700;9..40,800;9..40,900&display=swap');
-
-
-/* Color code variables to use in website */
-:root {
-    --text-color: #fff;
-    --bg-color: #020210;
-    --main-theme-color: #ff1a1a;
-    --main-theme-hover: #c90000;
-    --footer-bg: #282833;
-}
-
-
-/* default CSS for each element */
-* {
-    margin: 0;
-    padding: 0;
-    font-family: 'DM Sans', sans-serif;
-    text-decoration: none;
-    transition: 0.2s ease-in-out;
-    outline: none;
-}
-
-::selection {
-    background: var(--main-theme-color);
-}
-
-body {
-    display: flex;
-    overflow-x: hidden;
-    background-color: var(--bg-color);
-    color: var(--text-color);
-}
-
-::-webkit-scrollbar {
-    display: none;
-}
-
-
-
-
-.right-container{
+.right-container {
     width: 50vw;
     height: 100vh;
     display: flex;
@@ -48,7 +7,7 @@ body {
     overflow-x: hidden;
 }
 
-.top-sec{
+.top-sec {
     display: flex;
     justify-content: space-between;
     padding: 2vh 20px;
@@ -56,11 +15,11 @@ body {
     height: 10vh;
 }
 
-.top-sec h3{
+.top-sec h3 {
     font-weight: 900;
 }
 
-.top-sec div{
+.top-sec div {
     font-size: 0.8rem;
     height: 20px;
     width: 100px;
@@ -73,41 +32,42 @@ body {
     cursor: pointer;
 }
 
-.welcome-sec{
+.welcome-sec {
     height: 20%;
 }
 
-.welcome-sec h1{
+.welcome-sec h1 {
     font-size: 4rem;
     margin-bottom: -15px;
     font-weight: 800;
 }
 
 
-.welcome-sec p{
+.welcome-sec p {
     font-size: 0.6rem;
 }
 
 
-.login-register-sec{
+.login-register-sec {
     display: flex;
     width: 100vw;
     height: 70%;
 
 }
 
-.login-register-sec .login-sec{
+.login-register-sec .login-sec {
     width: 50%;
 }
 
-.login-sec{
+.login-sec {
     display: flex;
     flex-direction: column;
     align-items: center;
-    
+
 }
 
-.login-sec .loginWithG, .login-sec input{
+.login-sec .loginWithG,
+.login-sec input {
     height: 6vh;
     width: 70%;
     overflow: none;
@@ -124,22 +84,22 @@ body {
 
 }
 
-.login-sec .loginWithG{
+.login-sec .loginWithG {
     cursor: pointer;
 }
 
-.login-sec input::-webkit-input-placeholder{
+.login-sec input::-webkit-input-placeholder {
     color: #404040;
 }
 
 
 
-.loginWithG img{
+.loginWithG img {
     height: 50%;
     margin: 0 10px;
 }
 
-.login-sec .or{
+.login-sec .or {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -148,32 +108,32 @@ body {
     margin: 10px;
 }
 
-.or .line{
+.or .line {
     width: 20%;
     height: 1px;
     background-color: var(--text-color);
     margin: auto 20px;
 }
 
-.login-sec .forget-pass{
+.login-sec .forget-pass {
     width: 75%;
     text-align: right;
     height: 6vh;
 
 }
 
-a{
+a {
     color: var(--main-theme-color);
     font-weight: 500;
     text-decoration: none;
 }
 
-a:hover{
+a:hover {
     text-decoration: underline;
 }
 
 
-.login-sec .login{
+.login-sec .login {
     height: 6vh;
     width: 70%;
     display: flex;
@@ -187,35 +147,35 @@ a:hover{
     cursor: pointer;
 }
 
-.login-sec #register{
+.login-sec #register {
     margin-top: 6vh;
 }
 
-.login-sec .login:hover{
+.login-sec .login:hover {
     background-color: var(--main-theme-hover);
 }
 
-.left-container{
+.left-container {
     width: 50vw;
     height: 100vh;
     overflow: hidden;
     position: relative;
 }
 
-.carousel-item.active{
+.carousel-item.active {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.carousel-item img{
+.carousel-item img {
     height: 100vh;
     width: auto;
 }
 
 
 
-.next-prev-btns{
+.next-prev-btns {
     position: absolute;
     right: 10%;
     bottom: 10%;
@@ -223,56 +183,61 @@ a:hover{
     font-size: 1.5rem;
 }
 
-.next-prev-btns button i{
+.next-prev-btns button i {
     padding: 10px;
     border: 2px solid #fff;
     border-radius: 50%;
 }
 
 
-@media only screen and (max-width: 720px){
-    body{
+@media only screen and (max-width: 720px) {
+    body {
         flex-direction: column;
     }
-    .right-container{
+
+    .right-container {
         width: 100vw;
         min-height: 50vh;
     }
-    
 
-    .login-register-sec{
+
+    .login-register-sec {
         display: flex;
         width: 200vw;
     }
 
-    .login-sec .loginWithG, .login-sec input{
+    .login-sec .loginWithG,
+    .login-sec input {
         width: 90%;
     }
-    .login-sec .login{
+
+    .login-sec .login {
         width: 90%;
     }
-    .or .line{
+
+    .or .line {
         width: 30%;
     }
-    
-    .left-container{
+
+    .left-container {
         width: 100vw;
         height: min-content;
         margin-top: -9vh;
     }
-#carouselExampleDark{
-    width: 100vw;
+
+    #carouselExampleDark {
+        width: 100vw;
         height: min-content;
-}
-    
-    .carousel-item img{
+    }
+
+    .carousel-item img {
         width: 100%;
         height: 100%;
     }
-    
 
-    
-    .next-prev-btns{
+
+
+    .next-prev-btns {
         width: 20vw;
     }
 

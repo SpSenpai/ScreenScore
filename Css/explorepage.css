@@ -23,10 +23,10 @@
 
 /* The poster */
 .movie-list .movie{
-    background-color: var(--text-color);
     height: 50vh;
     display: flex;
     align-items: center;
+    box-shadow: 3px 3px 10px #000;
 }
 
 /* Poster image */
@@ -67,7 +67,8 @@
     height: 100%;
     width: 60%;
     padding: 10px;
-    color:var(--bg-color);
+    background-color: #eeeeee;
+    color: #000;
 }
 
 .details .title{
@@ -116,7 +117,8 @@
 }
 
 .page-change button:enabled:hover{
-    background-color: var(--color3);
+    background-color: var(--main-theme-color);
+    color: var(--sec-text-color);
 }
 
 @media only screen and (max-width: 720px) {

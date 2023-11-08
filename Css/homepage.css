@@ -22,6 +22,7 @@
 
 /* Banner details */
 .carousel-item .banner-details {
+    color: #fff;
     position: absolute;
     bottom: 6vh;
     left: 4vw;
@@ -52,7 +53,7 @@
     justify-content: center;
     align-items: center;
     background-color: var(--main-theme-color);
-    color: var(--text-color);
+    color: var(--sec-text-color);
     box-shadow: 3px 3px 10px #000;
 }
 
@@ -69,7 +70,7 @@
     padding: 0 2vw;
     font-size: 1.7rem;
     font-weight: 600;
-    border-bottom: 3px solid #fff;
+    border-bottom: 3px solid var(--text-color);
 }
 
 /* The Grid itself */
@@ -94,6 +95,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    color: var(--sec-text-color);
+
 }
 
 .movie-grid .movie img {
@@ -148,7 +151,7 @@
     height: 30px;
     border-radius: 5px;
     background-color: var(--main-theme-color);
-    color: var(--text-color);
+    color: var(--sec-text-color);
 }
 
 /* i is arrow symbol inside button */

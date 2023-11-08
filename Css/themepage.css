@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=ADLaM+Display&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,700;9..40,800;9..40,900&display=swap');
+
+
+/* Color code variables to use in website */
+:root {
+    --text-color: #fff;
+    --sec-text-color: #fff;
+    --bg-color: #020210;
+    --main-theme-color: #ff1a1a;
+    --main-theme-hover: #bc1b1b;
+    --footer-bg: #282833;
+}
+
+
+/* default CSS for each element */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'DM Sans', sans-serif;
+    text-decoration: none;
+    transition: 0.2s ease-in-out;
+    outline: none;
+}
+
+::selection {
+    background: var(--main-theme-color);
+    color: var(--sec-text-color);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+
+.container h1 {
+    margin: 4vh 2vw;
+    width: max-content;
+    padding: 0 2vw;
+    font-size: 1.7rem;
+    font-weight: 600;
+    border-bottom: 3px solid var(--text-color);
+    color: var(--text-color);
+}
+
+.themes-grid {
+    margin: 4vh 2vw;
+    width: 86vw;
+    margin-bottom: 50vh;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    gap: 3vw;
+}
+
+.theme-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    width: 100%;
+    height: 100px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    background-color: #ececec;
+    color: #000;
+    position: relative;
+}
+
+.theme-box:hover {
+    background-color: #b8b8b8;
+}
+
+.theme-box.selected-theme {
+    border: 1px solid var(--text-color);
+}
+
+
+.theme-box .theme-name {
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #000;
+    margin-bottom: 10px;
+    padding: 0 10px;
+}
+
+.theme-box .colors-grid {
+    display: flex;
+    height: 60px;
+    width: 100%;
+}
+
+.colors-grid .theme-color-box {
+    height: 80%;
+    width: 100%;
+    margin: 0 10px;
+    background-color: blue;
+}
+
+.costume-theme-edit {
+    position: fixed;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    background-color: #2e2e2e;
+    color: #fff;
+    padding: 10px 0;
+    width: 20vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 1px 1px 2px #000;
+    z-index: 2;
+    transition: 0.25s ease-in-out;
+}
+
+.background-white {
+    z-index: 1;
+    height: 100vh;
+    width: 100vw;
+    background-color: #ffffff6d;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: none;
+    opacity: 0;
+    transition: 0.25s ease-in-out;
+}
+
+.costume-theme-edit .color-pick {
+    width: 80%;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.color-pick img {
+    display: none;
+}
+
+.color-pick input {
+    margin-left: 10px;
+}
+
+.costume-theme-edit button {
+    width: 70%;
+    border: none;
+    border-radius: 4px;
+    margin-top: 5px;
+    padding: 5px 0;
+
+}
+
+.costume-theme-edit button:hover {
+    background-color: #c7c7c7;
+}

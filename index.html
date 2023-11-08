@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Screen Score</title>
     <link rel="stylesheet" href="Css/index.css">
+    <link rel="stylesheet" href="Css/themepage.css">
 </head>
+
 <body>
     <div class="background"><img src="Images/Welcome/welcome.jpg" alt="" srcset=""></div>
     <div class="dark-blur"></div>
-    
+
     <div class="welcome-text">
         <h1>Screen Score</h1>
         <h4>Welcome to Screen Score. Own Movie Rating Website</h5>
@@ -19,5 +22,17 @@
         <a href="Html/login.html"><button>Log in</button></a>
         <a href="Html/homepage.html"><button>Explore</button></a>
     </div>
+
+    <script>
+        theme = JSON.parse(localStorage.getItem("theme"));
+        let root = document.querySelector(":root");
+        root.style.setProperty("--main-theme-color", theme.color);
+        root.style.setProperty("--main-theme-hover", theme.hoverColor);
+        root.style.setProperty("--text-color", theme.textColor);
+        root.style.setProperty("--sec-text-color", theme.textColor2);
+        root.style.setProperty("--bg-color", theme.bgColor);
+        root.style.setProperty("--footer-bg", theme.footerColor);
+    </script>
 </body>
+
 </html>

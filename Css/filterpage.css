@@ -68,7 +68,7 @@ input::-webkit-inner-spin-button {
     border-radius: 2px;
     margin: 5px;
     background-color: var(--main-theme-color);
-    color: var(--text-color);
+    color: var(--sec-text-color);
 }
 
 .buttons button i {
@@ -78,12 +78,14 @@ input::-webkit-inner-spin-button {
 
 button.more-filters {
     background-color: var(--bg-color);
+    color: var(--text-color);
     border: 1px solid var(--text-color);
 }
 
 .buttons button:hover {
     background-color: var(--main-theme-hover);
     border: 1px solid var(--main-theme-hover);
+    color: var(--sec-text-color);
 }
 
 /* page change box */
