@@ -5,33 +5,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Screen Score</title>
-    <!-- Font awosome -->
-    <link rel="stylesheet" data-purpose="Layout StyleSheet" title="Web Awesome"
-        href="/css/app-wa-9a55d8748fd46de7b7977d9ee8dee7a4.css?vsn=d">
-
+    <!-- Liked with Font awosome CSS for icons in use-->
+    <link rel="stylesheet" data-purpose="Layout StyleSheet" title="Web Awesome" href="/css/app-wa-9a55d8748fd46de7b7977d9ee8dee7a4.css?vsn=d">
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.2/css/all.css">
-
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.2/css/sharp-solid.css">
-
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.2/css/sharp-regular.css">
-
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.2/css/sharp-light.css">
 
 
-    <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <!-- Linked with Bootstrap for some sliders-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
 
+    <!-- Main CSS File -->
     <link rel="stylesheet" href="../Css/homepage.css">
+
+    <!-- CSS file for NavBar and footer -->
     <link rel="stylesheet" href="../Css/navbar.css">
+
+    <!-- CSS file for theme -->
     <link rel="stylesheet" href="../Css/themepage.css">
 
 
 </head>
 
 <body>
+    <!-- Loading view -->
     <div class="loader"></div>
+
+    <!-- Go back to top button -->
     <div class="go-back-to-top"><i class="fa-sharp fa-solid fa-angle-up"></i></div>
+
     <!-- Nav Bar -->
     <div id="navbar">
 
@@ -52,6 +55,8 @@
             <div class="profile"><img src="/Images/Homepage/jon.jpg" alt="" srcset=""></div>
             <div class="hamburger"><i class="fa-sharp fa-solid fa-bars"></i></div>
         </nav>
+
+        <!-- Side nav bar for Mobile View -->
         <div class="side-nav-bar">
             <div class="cross-nav"><i class="fa-sharp fa-solid fa-xmark"></i></div>
             <ul>
@@ -64,10 +69,12 @@
         </div>
     </div>
 
+    <!-- Movies banner slider created using BOOTSTRAP -->
     <div class="banner">
         <div id="carouselExampleDark" class="carousel carousel-dark slide">
             <div class="carousel-inner">
                 <div class="carousel-item active" data-bs-interval="10000">
+                    <!-- This part of div gets overwritten by Javascript for Actual information featced. -->
                     <img src="../Images/Homepage/avangers.jpg" class="d-block " alt="...">
                     <div class="banner-details">
                         <div class="banner-title">Avatar : Preety expensive 2</div>
@@ -86,6 +93,8 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Next and Previous Hidden buttens -->
             <div class="next-prev-btns">
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"
                     data-bs-slide="prev">
@@ -96,9 +105,12 @@
             </div>
         </div>
     </div>
+
+    <!-- Movie Lists view -->
     <div class="movie-lists">
         <div class="list-type">FOR YOU</div>
         <div class="movie-grid">
+            <!-- This movie-grid div also gets overwritten from JS so just a placeholder code here -->
             <div class="movie">
                 <img src="../Images/Homepage/no-photo.jpg" alt="">
                 <div class="black-blur"></div>
@@ -117,35 +129,40 @@
                 <div class="view-more">View more</div>
             </div>
         </div>
-        <button class="load-more" onclick="loadmore('for_you')">Load more <i
-                class="fa-solid fa-angle-right"></i></button>
+        <button class="load-more" onclick="loadmore('for_you')">Load more <i class="fa-solid fa-angle-right"></i></button>
     </div>
+
+
     <div class="movie-lists">
         <div class="list-type">MOST POPULAR</div>
-        <div class="movie-grid"></div>
-
-        <button class="load-more" onclick="loadmore('most_popular')">Load more <i
-                class="fa-solid fa-angle-right"></i></button>
+        <div class="movie-grid">
+            <!-- Similar as previous movie grid, gets overeritten anyways... -->
+        </div>
+        <button class="load-more" onclick="loadmore('most_popular')">Load more <i class="fa-solid fa-angle-right"></i></button>
     </div>
+
+
     <div class="movie-lists">
         <div class="list-type">LATEST</div>
         <div class="movie-grid"></div>
-        <button class="load-more" onclick="loadmore('latest')">Load more <i
-                class="fa-solid fa-angle-right"></i></button>
+        <button class="load-more" onclick="loadmore('latest')">Load more <i class="fa-solid fa-angle-right"></i></button>
     </div>
+
+
     <div class="movie-lists">
         <div class="list-type">TOP RATED</div>
         <div class="movie-grid"></div>
-        <button class="load-more" onclick="loadmore('top_rated')">Load more <i
-                class="fa-solid fa-angle-right"></i></button>
+        <button class="load-more" onclick="loadmore('top_rated')">Load more <i class="fa-solid fa-angle-right"></i></button>
     </div>
+
+
     <div class="movie-lists">
         <div class="list-type">TV Series</div>
         <div class="movie-grid"></div>
-        <button class="load-more" onclick="loadmore('tv_series')">Load more <i
-                class="fa-solid fa-angle-right"></i></button>
+        <button class="load-more" onclick="loadmore('tv_series')">Load more <i class="fa-solid fa-angle-right"></i></button>
     </div>
     </div>
+
 
     <!-- Footer -->
     <div class="footer">
@@ -177,11 +194,10 @@
         </div>
     </div>
 
-    <!-- Bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
-        crossorigin="anonymous"></script>
+    <!-- Bootstrap JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 
+    <!-- My script files -->
     <script src="../Js/homepage.js"></script>
     <script src="../Js/navbar.js"></script>
     <script src="../Js/theme.js"></script>

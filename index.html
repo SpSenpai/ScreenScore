@@ -10,20 +10,26 @@
 </head>
 
 <body>
+    <!-- Background Image -->
     <div class="background"><img src="Images/Welcome/welcome.jpg" alt="" srcset=""></div>
     <div class="dark-blur"></div>
 
+    <!-- Welcome text -->
     <div class="welcome-text">
         <h1>Screen Score</h1>
-        <h4>Welcome to Screen Score. Own Movie Rating Website</h5>
+        <h4>Rate, Review, and Rediscover the world of cinema...</h5>
     </div>
 
+    <!-- Login Buttons -->
     <div class="buttons">
         <a href="Html/login.html"><button>Log in</button></a>
         <a href="Html/homepage.html"><button>Explore</button></a>
     </div>
 
+
     <script>
+        // Script To change the theme of site if someone has previously logged in and changed theme
+        // Theme color values are stored using localstorage, it retrives the data if available, else default values in CSS file are used
         theme = JSON.parse(localStorage.getItem("theme"));
         let root = document.querySelector(":root");
         root.style.setProperty("--main-theme-color", theme.color);
@@ -36,3 +42,4 @@
 </body>
 
 </html>
+
