@@ -1,1 +1,1 @@
-<h2>screenScore - Movie rating site</h2>
+<h2>ScreenScore - Movie rating site</h2>
