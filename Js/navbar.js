@@ -62,6 +62,7 @@ function activateTheme() {
 }
 
 
+// Go back to top BTN
 let goBackToTopBtn = document.querySelector('.go-back-to-top');
 
 goBackToTopBtn.addEventListener('click', ()=>{

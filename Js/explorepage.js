@@ -163,7 +163,7 @@ function displayMovies(data, parentDiv) {
                 <div class="title">${chooseNameorTitle(name, title)}  <span>${releseYear(release_date)}</span></div>
                 <div class="genre">${getGenreNames(genre_ids).join(' | ')}</div>
                 <div class="reting">
-                    ${starsGenerate(vote_average)}
+                    ${starsGenerate(vote_average/2)}
                     <span>${vote_count} Votes</span>
                     <div class="desc">${overview}</div>
                     <a href="reviewpage.html?name=${chooseNameorTitle(name, title)}&type=${chooseMovieorTv(name)}&id=${id}" class="view-more">View More</a>
@@ -204,7 +204,8 @@ function searchURL(mainType = 'movie', query="", page=1) {
 // Function to generate Image src url by path
 function imageURL(path, isbanner = false) {
     if (path == null)
-        return "https://image.tmdb.org/t/p/w500/1E5baAaEse26fej7uHcjOgEE2t2.jpg"
+        // Return A random image if API doesn't provide
+        return "../Images/Homepage/Noimage.png"
     else
         if (isbanner)
             return "https://image.tmdb.org/t/p/original" + path;
@@ -225,7 +226,6 @@ function starsGenerate(rating = 0.0) {
         }
         else {
             html = html + "<i class=\"fa-sharp fa-regular fa-star\"></i>"
-
         }
         rating--;
     }
