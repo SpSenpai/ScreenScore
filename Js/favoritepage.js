@@ -91,7 +91,6 @@ if(favorites == null) favorites = []
 
 
 // For you
-console.log(generateUrl('movie', 'primary_release_date', 'desc', 1, '&vote_count.gte=400'))
 
 if(favorites.length === 0){
     movieGrid.innerHTML= "<div class=\"no-favs\"> No favorites movies/tv-series to show. Please add some first! <a href=\"homepage.html\">Go to homepage</a></div>"
@@ -111,7 +110,6 @@ function getMovies(url, parentDiv) {
 
 // Function to display movies in page based on data and parent div
 function displayMovies(data, parentDiv) {
-    console.log(data)
     let movieDiv = document.createElement('div')
     const {title, name, id, vote_average, poster_path } = data;
     movieDiv.className = "movie"

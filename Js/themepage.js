@@ -32,6 +32,8 @@ if (savedCostumeTheme != null) {
   colorPick[0].value = savedCostumeTheme.color;
   colorPick[1].value = savedCostumeTheme.bgColor;
   colorPick[2].value = savedCostumeTheme.textColor;
+  colorPick[3].value = savedCostumeTheme.textColor2;
+  colorPick[4].value = savedCostumeTheme.footerColor;
 }
 
 let selectedTheme = JSON.parse(localStorage.getItem("theme"));

@@ -101,7 +101,6 @@ const Genres = [
 getMovie(BASE_URL + "/" + type + "/" + id + "?language=en-US&api_key=" + API_KEY)
 function getMovie(url) {
     fetch(url).then(res => res.json()).then(data => {
-        console.log(data)
         if(type == "movie")
         fillDetails(data)
         else
@@ -194,7 +193,6 @@ function imageURL(path, isbanner = false) {
 
 // functiuon to generate btn from genres
 function generateGenreBtns(genres = []) {
-    console.log(genres)
     let html = ''
     for (let i = 0; i < genres.length; i++) {
         html = html + "<button class=\"genre-btn\" onclick='loadgenrefilter("+genres[i].id+")'>" + genres[i]["name"] + "</button>"

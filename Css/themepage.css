@@ -110,7 +110,7 @@ body {
     position: fixed;
     top: 100%;
     left: 50%;
-    transform: translate(-50%, 50%);
+    transform: translate(-50%, 20%);
     background-color: #2e2e2e;
     color: #fff;
     padding: 10px 0;

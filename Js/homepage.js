@@ -91,7 +91,6 @@ let bannerSlider = document.querySelector('.carousel-inner')
 getMovies(generateUrl('movie', 'primary_release_date', 'desc', 1, '&vote_count.gte=1000'), bannerSlider, 5)
 
 // For you
-console.log(generateUrl('movie', 'primary_release_date', 'desc', 1, '&vote_count.gte=400'))
 getMovies(generateUrl('movie', 'primary_release_date', 'desc', 1, '&vote_count.gte=400'), movieGrids[0], 8)
 
 // Most Popular
@@ -114,7 +113,6 @@ function getMovies(url, parentDiv, noOfData = 20) {
 
 // Function to display movies in page based on data and parent div
 function displayMovies(data, parentDiv) {
-    console.log(data)
     parentDiv.innerHTML = ""
     data.forEach(movie => {
         let movieDiv = document.createElement('div')

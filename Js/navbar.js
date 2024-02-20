@@ -74,10 +74,8 @@ let lastScrollTop = window.scrollY  || document.documentElement.scrollTop;
 window.addEventListener('scroll', ()=>{
   const scrollTopPosition = window.scrollY  || document.documentElement.scrollTop;
   if (scrollTopPosition > lastScrollTop) {
-    console.log('scrolling down');
     goBackToTopBtn.style.opacity = '0'
   } else {
-    console.log('scrolling up');
     goBackToTopBtn.style.opacity = '1'
 
   }

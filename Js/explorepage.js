@@ -138,7 +138,6 @@ function getMovies(url, parentDiv, noOfData = 20) {
     window.scrollTo(0, 0)
 
     fetch(url).then(res => res.json()).then(data => {
-        console.log(data.total_pages)
         totalPages = data.total_pages
         pageEnableDisable(page, data.total_pages)
         if(data.results.length == 0)  listType.innerHTML = "No results found for \"" + search +"\""
@@ -148,7 +147,6 @@ function getMovies(url, parentDiv, noOfData = 20) {
 
 // Function to display movies in page based on data and parent div
 function displayMovies(data, parentDiv) {
-    console.log(data)
     parentDiv.innerHTML = ""
     data.forEach(movie => {
         let movieDiv = document.createElement('div')
