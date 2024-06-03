@@ -15,9 +15,9 @@
 }
 
 .genres .genre-box {
-    width: 13%;
+    width: max-content;
     margin: 5px 10px;
-    padding: 3px;
+    padding: 3px 30px;
     border: 1px solid var(--text-color);
     border-radius: 30px;
     display: flex;

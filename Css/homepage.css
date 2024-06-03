@@ -99,8 +99,10 @@
 
 }
 
-.movie-grid .movie img {
+.movie img {
+    height: 100%;
     width: 100%;
+    object-fit: cover;
 }
 
 .movie .movie-info {
@@ -128,13 +130,6 @@
     background-color: #000000d3;
     color: #fff;
     opacity: 0;
-}
-
-/* Movie hover effects */
-/* Image transformation */
-.movie:hover img {
-    width: 180%;
-    transform: rotate(-10deg);
 }
 
 /* Display view more */

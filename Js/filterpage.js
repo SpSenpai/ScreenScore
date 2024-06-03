@@ -111,7 +111,7 @@ let page = queryObject['page']
 
 if(genereQuery == undefined) genereQuery = ""
 if(minRating == undefined) minRating = 1.0
-if(maxRating == undefined) maxRating = 5.0
+if(maxRating == undefined) maxRating = 5
 if(minYear == undefined) minYear = 1950
 if(maxYear == undefined) maxYear = 2024
 if(minVote == undefined) minVote = 1
@@ -120,7 +120,8 @@ if(type == undefined) type = 'movie'
 if(page == undefined) page = 1
 let totalPages = 999
 
-let selectedGenres = genereQuery.split(',')
+
+let selectedGenres = genereQuery.replace(/^,/, '').split(',')
 let extraInput = document.querySelectorAll('.EF-input')
 
 extraInput[0].value = minRating
@@ -142,6 +143,7 @@ getMovies(BASE_URL + '/discover/'+type+'?page='+page+'&primary_release_date.gte=
 
 // Function to fetch movies and call display function by passing data
 function getMovies(url, parentDiv) {
+    console.log(url)
     fetch(url).then(res => res.json()).then(data => {
         totalPages = data.total_pages
         pageEnableDisable(page, data.total_pages)
@@ -261,7 +263,7 @@ Genres.forEach(g => {
 
 // Apply filter
 document.querySelector('.apply-filters').addEventListener('click', ()=>{
-    addOrUpdateURLParam('genres', selectedGenres.join(','))
+    addOrUpdateURLParam('genres', selectedGenres.toString())
     addOrUpdateURLParam('minrating', extraInput[0].value)
     addOrUpdateURLParam('maxrating', extraInput[1].value)
     addOrUpdateURLParam('minyear', extraInput[2].value)
