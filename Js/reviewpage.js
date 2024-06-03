@@ -98,7 +98,7 @@ const Genres = [
 
 
 
-getMovie(BASE_URL + "/" + type + "/" + id + "?language=en-US&api_key=" + API_KEY)
+getMovie(BASE_URL + "/" + type + "/" + id + "?language=en-US&append_to_response=videos&api_key=" + API_KEY)
 function getMovie(url) {
     fetch(url).then(res => res.json()).then(data => {
         if(type == "movie")
@@ -109,8 +109,7 @@ function getMovie(url) {
 }
 
 function fillDetails(data) {
-    const { title, id, vote_average, vote_count, genres, backdrop_path, poster_path, runtime, revenue, budget, release_date, overview } = data;
-
+    const { title, id, vote_average, vote_count, genres, backdrop_path, poster_path, runtime, revenue, budget, release_date, overview, videos } = data;
     let infoSection = document.querySelector(".info-section")
     infoSection.innerHTML =
         `
@@ -141,6 +140,8 @@ function fillDetails(data) {
             <button onclick="traillerBoxOpen()" class="watch-trailer">Watch trailer <i class="fa-solid fa-play"></i></button>
         </div>
     ` + infoSection.innerHTML
+
+    fillTraillerSec(videos.results)
 }
 
 function fillDetailsTV(data){
@@ -179,6 +180,27 @@ function fillDetailsTV(data){
 }
 
 
+function fillTraillerSec(videos){
+    console.log(videos)
+    traillerDiv = document.querySelector('.youtube-traillers')
+    traillerDiv.innerHTML = ''
+    for(i = 0; i < videos.length; i++){
+        traillerDiv.innerHTML += `      
+        <div class="carousel-item ${i === 0?'active':''}">
+        <div class="yt-video">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/${videos[i]['key']}"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+        </div>
+        </div>
+        `
+        console.log(videos[i])
+    }
+}
+
+
+
 // Function to generate Image src url by path
 function imageURL(path, isbanner = false) {
     if (path == null)
@@ -188,7 +210,7 @@ function imageURL(path, isbanner = false) {
             return "https://image.tmdb.org/t/p/original" + path;
         else
             return "https://image.tmdb.org/t/p/w500" + path;
-}
+} 
 
 
 // functiuon to generate btn from genres
